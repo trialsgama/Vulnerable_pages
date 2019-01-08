@@ -10,13 +10,13 @@ $(document).ready(function() {
             datatype:"JSON",
             url: busqueda,
             success: function(data) {
-                console.log(data);
+                
                 var resultado = data;
-                console.log(resultado);
-                for(i=0;i<data.length;i++){
-                    console.log(resultado.kind[i]);
+                console.log(resultado.items.lenght);
+                for(i=0;i<10;i++){
+                    console.log(resultado.items[i]);
                     
-                    $('#content').append(resultado);
+                $('#resultado').append("Resultado " + resultado.items[i].link + "<br>");
 
                 }
                 
